@@ -18,14 +18,19 @@ namespace MyProject.Models
                 else name = value;
             } }
         public int Points { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
 
         public List<HighScore> Scores{get;set;}
 
-        public Player(string name)
+        public Player(string name,string username,string password)
         {
             Name = name;
             
             this.Scores = new List<HighScore>();
+            Points = 0;
+            this.UserName = username;
+            this.Password = password;
 
         }
 

@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace MyProject._4.UI
 {
-    public class Screen
+    public class MenuScreen:Screen
     {
-        protected string title;
+        Dictionary<string, Screen> menu;
 
-        public Screen(string title)
+        public MenuScreen(string title) : base(title)
         {
-            this.title = title;
         }
 
         public virtual void Show()
