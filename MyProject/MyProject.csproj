@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="2.Models\Games\" />
+    <PackageReference Include="Towel" Version="1.0.40" />
   </ItemGroup>
 
 </Project>

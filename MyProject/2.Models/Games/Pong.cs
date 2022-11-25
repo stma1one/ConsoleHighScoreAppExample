@@ -1,3 +1,4 @@
+using MyProject._4.UI;
 using System;
 using System.Diagnostics;
 using System.Threading;
@@ -9,8 +10,9 @@ public float X;
 	public float dX;
 	public float dY;
 }
-public class Pong
+public class Pong:IGamePlay
 {
+	public string Name { get; set; } = "Pong";
   public int Score{get;set;}
   
   public void Play()

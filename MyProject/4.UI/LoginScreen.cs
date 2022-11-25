@@ -18,23 +18,36 @@ namespace MyProject._4.UI
         }
         public override void Show()
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
             base.Show();
-            Console.WriteLine("Enter UserName");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write($"{"\tEnter UserName"}");
+            Console.SetCursorPosition(Console.CursorLeft - 13, Console.CursorTop + 1);
+            Console.ResetColor();
             string user = Console.ReadLine();
-            Console.WriteLine("Enter password");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write($"{"\tEnter password"}");
+            Console.SetCursorPosition(Console.CursorLeft - 13, Console.CursorTop + 1);
+            Console.ResetColor();
             string password = Console.ReadLine();
             MainUi.p = Login(user, password);
             while(MainUi.p==null)
             {
-                Console.WriteLine("Invalid Login");
-                Console.WriteLine("Enter UserName");
-                user = Console.ReadLine();
-                Console.WriteLine("Enter password");
-                password = Console.ReadLine();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"{"\tInvalid Login Try Again"}");
+                Thread.Sleep(2000);
+                Show();
+
             }
-            Console.WriteLine("Login Successfull");
-            Screen next = new Screen("Welcome");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\tLogin Successfull");
+            Thread.Sleep(2000);
+            Screen next = new MainMenuScreen();
+            Console.ResetColor();
             next.Show();
+            base.Show();
+            Console.WriteLine("Press Any Key To SignOut...",10);
+            Console.ReadKey();
 
         }
 

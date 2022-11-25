@@ -1,3 +1,4 @@
+using MyProject._4.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,9 +26,11 @@ enum Direction
 	Left = 2,
 	Right = 3,
 }
-public class PacManGame
+public class PacManGame:IGamePlay
 {
-public void Play()
+	public string Name { get; set; } = "Pac-Man";
+	public int Score { get; set; }
+    public void Play()
 {
 #region Ascii
 
@@ -146,7 +149,7 @@ ConsoleColor OriginalBackgroundColor = Console.BackgroundColor;
 ConsoleColor OriginalForegroundColor = Console.ForegroundColor;
 
 char[,] Dots;
-int Score;
+
 (int X, int Y) PacManPosition;
 Direction? PacManMovingDirection = default;
 int? PacManMovingFrame = default;

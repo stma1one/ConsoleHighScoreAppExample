@@ -44,7 +44,7 @@ namespace MyProject.Models
             var highscore = Scores.FirstOrDefault(x => x.Game == game);
             if(highscore == null)
             {
-                Scores.Add(highscore);
+                Scores.Add(new HighScore() { Game = game,Score=score }) ;
             }
             else if(score>highscore.Score)
                     highscore.Score = score;

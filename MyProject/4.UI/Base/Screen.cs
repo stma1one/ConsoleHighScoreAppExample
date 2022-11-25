@@ -18,7 +18,8 @@ namespace MyProject._4.UI
         public virtual void Show()
         {
             Console.Clear();
-            Console.WriteLine($"{ title,65}");
+            Console.ResetColor();
+            Console.WriteLine($"{title,65}");
            
         }
     }
