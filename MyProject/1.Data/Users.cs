@@ -20,6 +20,10 @@ namespace MyProject._1.Data
             return players.FirstOrDefault(x => x.UserName == user && x.Password == password);
         }
 
-
+        internal static void Save(Player p)
+        {
+           players[players.FindIndex(x=>x.UserName==p.UserName)]=p;
+           
+        }
     }
 }

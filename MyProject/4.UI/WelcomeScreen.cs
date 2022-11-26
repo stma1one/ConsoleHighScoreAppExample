@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MyProject._1.Data;
+using MyProject.App;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -42,6 +44,7 @@ namespace MyProject._4.UI
        | (___) || (___) || (___) || (__/  )  | )___) )   | |   | (____/\
        (_______)(_______)(_______)(______/   |/ \___/    \_/   (_______/
                                                                         ");
+            Users.Save(MainUi.p);
             Console.ReadKey();
 
         }
