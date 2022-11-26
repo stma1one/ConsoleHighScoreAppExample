@@ -166,10 +166,12 @@ Console.Clear();
 if (scoreA > scoreB)
 {
 	Console.Write("You win.");
+	Score=scoreA;
 }
 if (scoreA < scoreB)
 {
 	Console.Write("You lose.");
+	Score = 0;
 }
 
 Ball CreateNewBall()
