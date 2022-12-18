@@ -14,6 +14,8 @@ namespace MyProject._4.UI
 	 }
 	public override Show()
  {
+ //flow
+ //
  base.Show();
  SetUserName();
  SetPassword();
