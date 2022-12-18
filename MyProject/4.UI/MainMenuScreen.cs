@@ -1,4 +1,4 @@
-﻿using MyProject.App;
+using MyProject.App;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +12,7 @@ namespace MyProject._4.UI
         public MainMenuScreen() : base($"Hello {MainUi.p.Name} ")
         {
             AddItem("Player Details", new PlayerDetailScreen());
+						AddItem("Register",new RegisterScreen());
             AddItem("Play Games",new GameMenuScreen());
         }
 

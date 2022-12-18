@@ -25,5 +25,13 @@ namespace MyProject._1.Data
            players[players.FindIndex(x=>x.UserName==p.UserName)]=p;
            
         }
+			public static void Update(Player p)
+			{
+				if(players.Find(x=>x.UserName==p.UserName)!=null)
+				{	Save(p);
+				 return;
+				}
+				players.Add(p);
+			}
     }
 }

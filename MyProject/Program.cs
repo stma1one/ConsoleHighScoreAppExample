@@ -1,10 +1,10 @@
-﻿using MyProject.App;
+using MyProject.App;
 using MyProject._4;
 using MyProject._4.UI;
 
 namespace MyProject
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {

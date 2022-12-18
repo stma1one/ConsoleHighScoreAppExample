@@ -1,4 +1,4 @@
-﻿using MyProject._4.UI;
+using MyProject._4.UI;
 using MyProject.Models;
 using System;
 using System.Collections.Generic;
