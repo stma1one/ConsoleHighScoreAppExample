@@ -8,6 +8,7 @@ namespace MyProject
     {
         static void Main(string[] args)
         {
+            //create main app
             MainUi app = new MainUi(new WelcomeScreen() );
             app.ApplicationStart();
 
