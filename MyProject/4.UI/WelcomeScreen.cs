@@ -32,7 +32,9 @@ namespace MyProject._4.UI
 
 
             Console.ReadKey();
-            Screen next = new LoginScreen();
+            Screen next = new MenuScreen("Start");
+            ((MenuScreen)next).AddItem("Login", new LoginScreen());
+            ((MenuScreen)next).AddItem("Register", new RegisterScreen());
             next.Show();
             Console.Clear();
             Console.WriteLine(@"        _______  _______  _______  ______     ______            _______ 

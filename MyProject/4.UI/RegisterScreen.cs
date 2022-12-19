@@ -1,5 +1,7 @@
 using MyProject._2.Models;
 using MyProject.App;
+using MyProject.Models;
+using MyProject._1;
 
 namespace MyProject._4.UI
 {
@@ -12,7 +14,7 @@ namespace MyProject._4.UI
 	 {
 	
 	 }
-	public override Show()
+	public override void Show()
  {
  //flow
  //
@@ -34,18 +36,18 @@ namespace MyProject._4.UI
  private void SetPassword()
  {
   Console.WriteLine("Please Enter Desired Password");
-	 this.password=Console.ReadLine();
+	 this.passWord=Console.ReadLine();
 	 while(!ValidatePassWord())
 	{
  	Console.WriteLine("Please Enter Desired Password");
-	 password=Console.ReadLine();
+	 passWord=Console.ReadLine();
 	}
  }
  private bool ValidateUserName()
  {
  return true;
  }
- private bool ValidatePassword()
+ private bool ValidatePassWord()
  {
  return true;
  }
@@ -54,8 +56,15 @@ private void CreatePlayer()
 {
 	Console.WriteLine("Enter Name");
   string name=Console.ReadLine();
-	MainUi.P=new Player(name,userName,password);
- Data.Update(MainUi.P);
+			try
+			{
+				MainUi.p = new Player(name, userName, passWord);
+				MyProject._1.Data.Users.Update(MainUi.p);
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine("Something went Wrong...");
+			}
 }
  
 }
